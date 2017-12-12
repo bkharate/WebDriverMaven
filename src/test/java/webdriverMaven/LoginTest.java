@@ -28,10 +28,12 @@ public class LoginTest {
 		driver.manage().timeouts().implicitlyWait(40l, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id='email']")).sendKeys("ninad.krishna");
 		driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("7058063437");
+		driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
 	}
 	
 	@AfterTest
 	public void teardown(){
+		
 		driver.quit();
 	}
 	
